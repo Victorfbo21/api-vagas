@@ -29,4 +29,8 @@ export default class ApplicationsController {
     public updateApplication = () => {
         //TODO
     }
+
+    public createRanking = () => {
+
+    }
 }

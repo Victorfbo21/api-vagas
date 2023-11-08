@@ -11,7 +11,6 @@ export default class ApplicationsServices {
 
     public createApplication = async (job: CreateApplicationInterface) => {
 
-
         const filter = {
             jobOpportunity: job.jobOpportunity,
             user: job.user

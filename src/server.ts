@@ -1,5 +1,5 @@
-import app from '../src/app'
-import { dbConnect } from '../src/config/dbConfig'
+import app from './app'
+import { dbConnect } from './config/dbConfig'
 
 dbConnect().then(() => {
     const port = process.env.PORT;

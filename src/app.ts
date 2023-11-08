@@ -4,21 +4,17 @@ import cors from 'cors'
 import { Router } from 'express';
 import Routes from './routes';
 
-
 config({
     path: '.env'
 })
 
 const app = express();
 
-
 const route = Router();
 
 app.use(express.json());
 app.use(cors());
 app.use(Routes)
-
-
 
 route.get('/', (req, res) => {
     res.json({ message: 'hello world with Typescript' })

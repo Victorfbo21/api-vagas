@@ -10,9 +10,15 @@
     "baseUrl": "./src",
     "outDir": "./dist",
     "paths": {
-      "@modules/*": ["modules/*"],
-      "@config/*": ["config/*"],
-      "@shared/*": ["shared/*"]
+      "@modules/*": [
+        "modules/*"
+      ],
+      "@config/*": [
+        "config/*"
+      ],
+      "@shared/*": [
+        "shared/*"
+      ]
     },
     "sourceMap": true,
     "esModuleInterop": true,
