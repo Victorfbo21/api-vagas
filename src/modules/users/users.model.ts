@@ -45,5 +45,16 @@ export default class UserModel {
         }
     }
 
+    public getUserById = async (userId: string) => {
+        try {
+            const user = await UserSchema.findById(userId)
+
+            return user
+        }
+        catch (err) {
+            throw new Error("Erro ao encontrar usuário")
+        }
+    }
+
 
 }

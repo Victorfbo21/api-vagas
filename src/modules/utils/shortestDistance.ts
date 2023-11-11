@@ -1,7 +1,12 @@
 
 
-const distances = [
+export const distances = [
     // todas de a
+    {
+        "orgin": "A",
+        "destiny": "A",
+        "dist": 0
+    },
     {
         "orgin": "A",
         "destiny": "B",
@@ -33,6 +38,11 @@ const distances = [
     {
         "orgin": "B",
         "destiny": "A",
+        "dist": 0
+    },
+    {
+        "orgin": "B",
+        "destiny": "A",
         "dist": 5
     },
     {
@@ -56,6 +66,11 @@ const distances = [
         "dist": 11
     },
     // todas de C
+    {
+        "orgin": "C",
+        "destiny": "C",
+        "dist": 0
+    },
     {
         "orgin": "C",
         "destiny": "A",
@@ -84,6 +99,11 @@ const distances = [
     // TODAS DE D
     {
         "orgin": "D",
+        "destiny": "D",
+        "dist": 0
+    },
+    {
+        "orgin": "D",
         "destiny": "A",
         "dist": 8
     },
@@ -110,6 +130,11 @@ const distances = [
     // TODOS DE E
     {
         "orgin": "E",
+        "destiny": "E",
+        "dist": 0
+    },
+    {
+        "orgin": "E",
         "destiny": "A",
         "dist": 16
     },
@@ -134,6 +159,11 @@ const distances = [
         "dist": 18
     },
     //TODOS DE F
+    {
+        "orgin": "F",
+        "destiny": "F",
+        "dist": 0
+    },
     {
         "orgin": "F",
         "destiny": "A",

@@ -46,4 +46,16 @@ export default class JobsModel {
     }
 
 
+    public getJobById = async (jobId: string) => {
+        try {
+            const job = await JobsSchema.findById(jobId)
+
+
+            return job
+        }
+        catch (err) {
+            throw new Error("Erro ao encontrar Vaga")
+        }
+    }
+
 }

@@ -1,6 +1,6 @@
 
-const calculateDParameter = (dist: number) => {
-    if (dist > 0 && dist <= 5) {
+export const calculateDParameter = (dist: number) => {
+    if (dist >= 0 && dist <= 5) {
         return 100
     }
     if (dist > 5 && dist <= 10) {

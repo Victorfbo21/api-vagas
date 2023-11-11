@@ -30,11 +30,9 @@ export default class ApplicationsModel {
             if (CompanyIsValid && userIsValid) {
 
                 const applications = await ApplicationsSchema.find({
-                    $or: [
+                    $and: [
                         { jobOpportunity: filter.jobOpportunity },
                         { user: filter.user },
-                    ],
-                    $and: [
                         { isActive: true }
                     ]
                 })
@@ -52,5 +50,26 @@ export default class ApplicationsModel {
         }
     }
 
+    public getApplicationsByJob = async (jobId: string) => {
+        try {
+            const applications = await ApplicationsSchema.find({ jobOpportunity: jobId })
+
+            return applications
+        }
+        catch (err) {
+            throw new Error("Erro ao Listar Candidaturas")
+        }
+    }
+
+    public getApplicationById = async (id: string) => {
+        try {
+            const application = await ApplicationsSchema.findById(id)
+
+            return application
+        }
+        catch (err) {
+            throw new Error("Erro ao encontrar Candidatura")
+        }
+    }
 
 }

@@ -16,4 +16,8 @@ JobsRoutes.post('/by-jobs', (request: Request, response: Response) => {
     return jobsController.getApplicationsByJob(request, response)
 })
 
+JobsRoutes.post('/ranking', (request: Request, response: Response) => {
+    return jobsController.getJobRanking(request, response)
+})  
+
 export default JobsRoutes;
