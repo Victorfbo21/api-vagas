@@ -21,7 +21,7 @@ export default class ApplicationsModel {
         //TODO
     }
 
-    public getApplications = async (filter: FilterApplicationsInterface, skip: any, limit: any) => {
+    public getApplications = async (filter: any, skip: any, limit: any) => {
         try {
             filter = filter || ""
             const CompanyIsValid = mongoose.Types.ObjectId.isValid(filter.jobOpportunity)
@@ -30,11 +30,12 @@ export default class ApplicationsModel {
             if (CompanyIsValid && userIsValid) {
 
                 const applications = await ApplicationsSchema.find({
-                    $and: [
+                    $or: [
                         { jobOpportunity: filter.jobOpportunity },
                         { user: filter.user },
+                    ],
+                    $and: [
                         { isActive: true }
-
                     ]
                 })
                     .skip(skip || 0)

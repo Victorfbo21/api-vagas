@@ -33,4 +33,16 @@ export default class JobsController {
     public updateJob = () => {
         //TODO
     }
+
+    public getApplicationsByJob = async (request: Request, response: Response) => {
+
+        const { jobId } = request.body
+
+        const result = await this.jobsServices.getApplicationsByJob(jobId)
+
+        if (!result)
+            response.status(500).json({ message: "Erro ao listar usuários" })
+
+        return response.status(200).json(result)
+    }
 }
